@@ -8,9 +8,15 @@ Gem::Specification.new do |gem|
   gem.version       = Estate::Demo::VERSION
   gem.authors       = ["kocolondon"]
   gem.email         = ["kingsley@kocolondon.com"]
-  gem.description   = %q{TODO: Demo practice project for developing with Ruby}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Demo practice project for developing with Ruby}
+  gem.summary       = %q{Write a gem summary}
   gem.homepage      = ""
+
+  gem.add_development_dependency 'rspec', '~> 2.14.1'
+  gem.add_development_dependency 'cucumber', '~> 1.3.10'
+  gem.add_development_dependency 'rspec-expectations', '~> 2.14.4'
+
+  gem.add_runtime_dependency 'activerecord', '~> 4.0.1'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
