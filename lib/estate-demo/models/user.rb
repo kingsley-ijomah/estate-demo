@@ -10,3 +10,5 @@ ActiveRecord::Base.logger = Logger.new(STDERR)
 class User < ActiveRecord::Base
 
 end
+
+puts User.count

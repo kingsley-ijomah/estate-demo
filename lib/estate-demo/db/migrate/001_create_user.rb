@@ -1,4 +1,6 @@
-class CreateUsers < ActiveRecord::Migration
+require 'active_record'
+
+class CreateUser < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
       t.column :firstname, :string, :null => false
