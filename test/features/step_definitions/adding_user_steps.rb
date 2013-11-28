@@ -1,4 +1,7 @@
-require '/private/var/www/apps/practice/estate-demo/lib/estate-demo/models/user'
+lib = File.expand_path('../../../../lib/estate-demo/models', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'user'
 
 Given(/^that I create the following users:$/) do |table|
   # table is a Cucumber::Ast::Table
