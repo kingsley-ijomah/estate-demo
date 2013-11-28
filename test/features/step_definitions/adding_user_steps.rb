@@ -1,4 +1,4 @@
-require 'user'
+require '/private/var/www/apps/practice/estate-demo/lib/estate-demo/models/user'
 
 Given(/^that I create the following users:$/) do |table|
   # table is a Cucumber::Ast::Table

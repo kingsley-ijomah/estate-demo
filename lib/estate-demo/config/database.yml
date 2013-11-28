@@ -1,0 +1,2 @@
+adapter: "sqlite3"
+database: "/private/var/www/apps/practice/estate-demo/lib/estate-demo/db/sqlite/file.sqlite3"
