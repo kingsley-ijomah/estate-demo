@@ -14,4 +14,8 @@ class User < ActiveRecord::Base
 	def create(user)
 		User.create(user)
 	end
+
+	def search(value)
+		User.where(firstname: value).take
+	end
 end
