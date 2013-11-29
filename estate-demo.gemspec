@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec-expectations', '~> 2.14.4'
 
   gem.add_runtime_dependency 'activerecord', '~> 4.0.1'
-   gem.add_runtime_dependency 'sqlite3', '~> 1.3.8'
+  gem.add_runtime_dependency 'sqlite3', '~> 1.3.8'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

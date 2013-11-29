@@ -1,8 +1,6 @@
 lib = File.expand_path('../../config/', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-puts $:
-
 require 'rubygems'
 require 'active_record'
 require 'yaml'
@@ -13,7 +11,7 @@ ActiveRecord::Base.establish_connection(dbconfig)
 ActiveRecord::Base.logger = Logger.new(STDERR)
 
 class User < ActiveRecord::Base
-
+	def create(user)
+		User.create(user)
+	end
 end
-
-puts User.count

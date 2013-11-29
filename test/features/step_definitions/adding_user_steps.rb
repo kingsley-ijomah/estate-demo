@@ -5,9 +5,12 @@ require 'user'
 
 Given(/^that I create the following users:$/) do |table|
   # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
+  @user = User.new
+  table.hashes.each do |user|
+  	@user.create(user)
+  end
 end
 
-Then(/^I should now have (\d+) records saved$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should now have (\d+) records saved$/) do |total|
+  expect(User.count).to eq(total.to_i)
 end
