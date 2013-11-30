@@ -14,14 +14,3 @@ end
 Then(/^I should now have (\d+) records saved$/) do |total|
   expect(User.count).to eq(total.to_i)
 end
-
-When(/^I search for user with firstname equals "(.*?)"$/) do |firstname|
-  @search = @user.search(firstname)
-end
-
-Then(/^I expect to get result matching:$/) do |table|
-  # table is a Cucumber::Ast::Table
-  table.hashes.each do | user |
-  	expect(user['lastname']).to eq(@search.lastname)
-  end
-end
