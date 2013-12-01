@@ -18,6 +18,11 @@ namespace :db do
 		ActiveRecord::Base.logger = Logger.new(File.open('database.log', 'a'))
 	end
 
+	desc "Establish connection to test database"
+	task :environment do
+		ActiveRecord::Base.establish_connection(YAML::load(File.open('lib/estate-demo/config/test.yml')))
+	end
+
 	desc "Drop database tables"
 	task :down => :environment do
 		ActiveRecord::Migrator.migrate('lib/estate-demo/db/migrate', 0)
