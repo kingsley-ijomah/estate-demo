@@ -166,3 +166,363 @@ D, [2013-11-30T20:40:38.075226 #35201] DEBUG -- :   [1m[35m (0.0ms)[0m  begin
 D, [2013-11-30T20:40:38.097160 #35201] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) [0m
 D, [2013-11-30T20:40:38.108469 #35201] DEBUG -- :   [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "1"]]
 D, [2013-11-30T20:40:38.110023 #35201] DEBUG -- :   [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:33:02.147065 #54870] DEBUG -- :   [1m[36m (1.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+D, [2013-12-02T22:33:02.148571 #54870] DEBUG -- :   [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+D, [2013-12-02T22:33:02.149069 #54870] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:33:02.149123 #54870]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:33:02.161171 #54870] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:33:02.161980 #54870] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) [0m
+D, [2013-12-02T22:33:02.191969 #54870] DEBUG -- :   [1m[35mSQL (18.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "1"]]
+D, [2013-12-02T22:33:02.193416 #54870] DEBUG -- :   [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:36:42.806024 #54946] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:36:42.808113 #54946] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:36:42.808695 #54946] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:36:42.808779 #54946]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:36:42.809233 #54946] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:36:42.809748 #54946] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:36:42.817911 #54946] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:36:42.819409 #54946] DEBUG -- :   [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:36:42.819877 #54946] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:36:42.820354 #54946] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:36:42.820883 #54946] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:36:42.820927 #54946]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:36:42.821175 #54946] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:36:42.831117 #54946] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:36:42.833811 #54946] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:36:42.835360 #54946] DEBUG -- :   [1m[35m (1.4ms)[0m  commit transaction
+D, [2013-12-02T22:37:02.698400 #54988] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:37:02.700357 #54988] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:37:02.700923 #54988] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:37:02.701018 #54988]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:37:02.701444 #54988] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2013-12-02T22:37:02.701969 #54988] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:37:02.703616 #54988] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:37:02.705193 #54988] DEBUG -- :   [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:37:02.705659 #54988] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:37:02.706002 #54988] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:37:02.706445 #54988] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:37:02.706485 #54988]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:37:02.706715 #54988] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:37:02.716610 #54988] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:37:02.719076 #54988] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:37:02.720829 #54988] DEBUG -- :   [1m[35m (1.6ms)[0m  commit transaction
+D, [2013-12-02T22:38:27.481763 #55033] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:38:27.483711 #55033] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:38:27.484284 #55033] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:38:27.484368 #55033]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:38:27.484807 #55033] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:38:27.485326 #55033] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:38:27.486975 #55033] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:38:27.488420 #55033] DEBUG -- :   [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:38:27.488855 #55033] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:38:27.489190 #55033] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:38:27.489642 #55033] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:38:27.489682 #55033]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:38:27.489888 #55033] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:38:27.499834 #55033] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:38:27.502250 #55033] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:38:27.504056 #55033] DEBUG -- :   [1m[35m (1.7ms)[0m  commit transaction
+D, [2013-12-02T22:40:51.140501 #55075] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:40:51.142635 #55075] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:40:51.143232 #55075] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:40:51.143333 #55075]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:40:51.143796 #55075] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:40:51.144303 #55075] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:40:51.145980 #55075] DEBUG -- :   [1m[35mSQL (0.6ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:40:51.147507 #55075] DEBUG -- :   [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:40:51.147993 #55075] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:40:51.148336 #55075] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:40:51.148776 #55075] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:40:51.148816 #55075]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:40:51.149026 #55075] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:40:51.159122 #55075] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:40:51.161542 #55075] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:40:51.164339 #55075] DEBUG -- :   [1m[35m (2.7ms)[0m  commit transaction
+D, [2013-12-02T22:44:53.492392 #55202] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:44:53.494354 #55202] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:44:53.494925 #55202] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:44:53.495021 #55202]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:44:53.495449 #55202] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:44:53.495944 #55202] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:44:53.497584 #55202] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:44:53.546226 #55202] DEBUG -- :   [1m[36m (48.5ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:44:53.546924 #55202] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:44:53.547275 #55202] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:44:53.547783 #55202] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:44:53.547830 #55202]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:44:53.548151 #55202] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:44:53.558277 #55202] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:44:53.560837 #55202] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:44:53.562594 #55202] DEBUG -- :   [1m[35m (1.6ms)[0m  commit transaction
+D, [2013-12-02T22:51:14.029542 #55244] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:51:14.031500 #55244] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:51:14.032070 #55244] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:51:14.032166 #55244]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:51:14.032620 #55244] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:51:14.033122 #55244] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:51:14.034803 #55244] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:51:14.036437 #55244] DEBUG -- :   [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:51:14.036952 #55244] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:51:14.037296 #55244] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:51:14.037764 #55244] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:51:14.037804 #55244]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:51:14.038053 #55244] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:51:14.048238 #55244] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:51:14.050780 #55244] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:51:14.052435 #55244] DEBUG -- :   [1m[35m (1.5ms)[0m  commit transaction
+D, [2013-12-02T22:53:47.073661 #55329] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:53:47.075639 #55329] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:53:47.076209 #55329] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:53:47.076302 #55329]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:53:47.076726 #55329] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:53:47.077233 #55329] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:53:47.078922 #55329] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:53:47.080336 #55329] DEBUG -- :   [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:53:47.080802 #55329] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:53:47.081136 #55329] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:53:47.081575 #55329] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:53:47.081616 #55329]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:53:47.081825 #55329] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:53:47.091710 #55329] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:53:47.094378 #55329] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:53:47.095964 #55329] DEBUG -- :   [1m[35m (1.5ms)[0m  commit transaction
+D, [2013-12-02T22:54:11.765551 #55379] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:54:11.767548 #55379] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:54:11.768159 #55379] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:54:11.768264 #55379]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:54:11.768691 #55379] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:54:11.769192 #55379] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:54:11.770856 #55379] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:54:11.772595 #55379] DEBUG -- :   [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:54:11.773122 #55379] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:54:11.773472 #55379] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:54:11.773934 #55379] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:54:11.773974 #55379]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:54:11.774219 #55379] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:54:11.784531 #55379] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:54:11.787008 #55379] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:54:11.788701 #55379] DEBUG -- :   [1m[35m (1.6ms)[0m  commit transaction
+D, [2013-12-02T22:54:35.249548 #55441] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:54:35.251569 #55441] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:54:35.252149 #55441] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:54:35.252233 #55441]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:54:35.252697 #55441] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:54:35.253220 #55441] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:54:35.254980 #55441] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:54:35.256568 #55441] DEBUG -- :   [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:54:35.257044 #55441] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:54:35.257381 #55441] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:54:35.257844 #55441] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:54:35.257885 #55441]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:54:35.258099 #55441] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:54:35.268021 #55441] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:54:35.270492 #55441] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:54:35.272134 #55441] DEBUG -- :   [1m[35m (1.5ms)[0m  commit transaction
+D, [2013-12-02T22:55:26.399606 #55486] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:55:26.401661 #55486] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:55:26.402228 #55486] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:55:26.402313 #55486]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:55:26.402759 #55486] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:55:26.403687 #55486] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:55:26.405336 #55486] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:55:26.407898 #55486] DEBUG -- :   [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:55:26.408376 #55486] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:55:26.408701 #55486] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:55:26.409137 #55486] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:55:26.409178 #55486]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:55:26.409388 #55486] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:55:26.419213 #55486] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:55:26.421773 #55486] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:55:26.424575 #55486] DEBUG -- :   [1m[35m (2.7ms)[0m  commit transaction
+D, [2013-12-02T22:55:40.440251 #55530] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:55:40.442279 #55530] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:55:40.442877 #55530] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:55:40.442976 #55530]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:55:40.443416 #55530] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2013-12-02T22:55:40.443938 #55530] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:55:40.445581 #55530] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:55:40.447074 #55530] DEBUG -- :   [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:55:40.447585 #55530] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:55:40.447972 #55530] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:55:40.448437 #55530] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:55:40.448478 #55530]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:55:40.448721 #55530] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:55:40.458947 #55530] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:55:40.461424 #55530] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:55:40.463752 #55530] DEBUG -- :   [1m[35m (2.2ms)[0m  commit transaction
+D, [2013-12-02T22:56:08.651884 #55592] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:56:08.653828 #55592] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:56:08.654382 #55592] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:56:08.654466 #55592]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:56:08.654902 #55592] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:56:08.655422 #55592] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:56:08.657078 #55592] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:56:08.658793 #55592] DEBUG -- :   [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:56:08.659245 #55592] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:56:08.659566 #55592] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:56:08.660002 #55592] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:56:08.660042 #55592]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:56:08.660249 #55592] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:56:08.670181 #55592] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:56:08.672599 #55592] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:56:08.674565 #55592] DEBUG -- :   [1m[35m (1.8ms)[0m  commit transaction
+D, [2013-12-02T22:56:43.934841 #55654] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:56:43.936827 #55654] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:56:43.937395 #55654] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:56:43.937479 #55654]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:56:43.937916 #55654] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:56:43.938439 #55654] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:56:43.940095 #55654] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:56:43.941853 #55654] DEBUG -- :   [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:56:43.942312 #55654] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:56:43.942659 #55654] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:56:43.943108 #55654] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:56:43.943149 #55654]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:56:43.943364 #55654] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:56:43.953308 #55654] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:56:43.955777 #55654] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:56:43.957373 #55654] DEBUG -- :   [1m[35m (1.5ms)[0m  commit transaction
+D, [2013-12-02T22:57:42.572427 #55696] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:57:42.574432 #55696] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:57:42.574998 #55696] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:57:42.575081 #55696]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:57:42.575534 #55696] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:57:42.576020 #55696] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:57:42.577680 #55696] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:57:42.579327 #55696] DEBUG -- :   [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:57:42.579792 #55696] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:57:42.580130 #55696] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:57:42.580581 #55696] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:57:42.580622 #55696]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:57:42.580835 #55696] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:57:42.590711 #55696] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:57:42.593149 #55696] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:57:42.594777 #55696] DEBUG -- :   [1m[35m (1.5ms)[0m  commit transaction
+D, [2013-12-02T22:58:15.206127 #55758] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:58:15.208119 #55758] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:58:15.208687 #55758] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:58:15.208782 #55758]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:58:15.209204 #55758] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:58:15.209726 #55758] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:58:15.211368 #55758] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:58:15.274562 #55758] DEBUG -- :   [1m[36m (63.1ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:58:15.275170 #55758] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:58:15.275517 #55758] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:58:15.275995 #55758] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:58:15.276040 #55758]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:58:15.276325 #55758] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:58:15.286529 #55758] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:58:15.289095 #55758] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:58:15.290748 #55758] DEBUG -- :   [1m[35m (1.5ms)[0m  commit transaction
+D, [2013-12-02T22:59:29.529528 #55802] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:59:29.531574 #55802] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:59:29.532160 #55802] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T22:59:29.532259 #55802]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:59:29.532702 #55802] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T22:59:29.533627 #55802] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T22:59:29.535314 #55802] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T22:59:29.537999 #55802] DEBUG -- :   [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T22:59:29.538473 #55802] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T22:59:29.538807 #55802] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T22:59:29.539248 #55802] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T22:59:29.539288 #55802]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T22:59:29.539499 #55802] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T22:59:29.549424 #55802] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T22:59:29.551833 #55802] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T22:59:29.553167 #55802] DEBUG -- :   [1m[35m (1.2ms)[0m  commit transaction
+D, [2013-12-02T23:00:27.337576 #55844] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:00:27.339573 #55844] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:00:27.340137 #55844] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T23:00:27.340233 #55844]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:00:27.340668 #55844] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2013-12-02T23:00:27.341220 #55844] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T23:00:27.342857 #55844] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T23:00:27.360090 #55844] DEBUG -- :   [1m[36m (17.1ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T23:00:27.360576 #55844] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:00:27.360921 #55844] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:00:27.361376 #55844] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T23:00:27.361418 #55844]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:00:27.361639 #55844] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T23:00:27.371397 #55844] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T23:00:27.373896 #55844] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T23:00:27.375378 #55844] DEBUG -- :   [1m[35m (1.3ms)[0m  commit transaction
+D, [2013-12-02T23:01:10.728550 #55886] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:01:10.730684 #55886] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:01:10.731275 #55886] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T23:01:10.731394 #55886]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:01:10.731856 #55886] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T23:01:10.732410 #55886] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T23:01:10.734081 #55886] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T23:01:10.735654 #55886] DEBUG -- :   [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T23:01:10.736137 #55886] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:01:10.736475 #55886] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:01:10.736931 #55886] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T23:01:10.736989 #55886]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:01:10.737212 #55886] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T23:01:10.747494 #55886] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T23:01:10.749981 #55886] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T23:01:10.751632 #55886] DEBUG -- :   [1m[35m (1.5ms)[0m  commit transaction
+D, [2013-12-02T23:04:06.674498 #55929] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:04:06.676497 #55929] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:04:06.677075 #55929] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T23:04:06.677161 #55929]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:04:06.677613 #55929] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T23:04:06.678103 #55929] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T23:04:06.679837 #55929] DEBUG -- :   [1m[35mSQL (0.6ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T23:04:06.681465 #55929] DEBUG -- :   [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T23:04:06.682001 #55929] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:04:06.682356 #55929] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:04:06.682836 #55929] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T23:04:06.682876 #55929]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:04:06.683121 #55929] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T23:04:06.693494 #55929] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T23:04:06.696014 #55929] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T23:04:06.697581 #55929] DEBUG -- :   [1m[35m (1.4ms)[0m  commit transaction
+D, [2013-12-02T23:04:26.732853 #55971] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:04:26.734881 #55971] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:04:26.735445 #55971] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T23:04:26.735544 #55971]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:04:26.735975 #55971] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T23:04:26.736478 #55971] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T23:04:26.738147 #55971] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T23:04:26.739761 #55971] DEBUG -- :   [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T23:04:26.740231 #55971] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:04:26.740568 #55971] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:04:26.741010 #55971] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T23:04:26.741050 #55971]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:04:26.741257 #55971] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T23:04:26.751073 #55971] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T23:04:26.753568 #55971] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T23:04:26.755025 #55971] DEBUG -- :   [1m[35m (1.3ms)[0m  commit transaction
+D, [2013-12-02T23:04:35.439664 #55992] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:04:35.441700 #55992] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:04:35.442254 #55992] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T23:04:35.442337 #55992]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:04:35.442787 #55992] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2013-12-02T23:04:35.443294 #55992] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T23:04:35.444930 #55992] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T23:04:35.446418 #55992] DEBUG -- :   [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T23:04:35.446891 #55992] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:04:35.447221 #55992] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:04:35.447677 #55992] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2013-12-02T23:04:35.447718 #55992]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:04:35.447927 #55992] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2013-12-02T23:04:35.457918 #55992] DEBUG -- :   [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) 
+D, [2013-12-02T23:04:35.460365 #55992] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+D, [2013-12-02T23:04:35.462079 #55992] DEBUG -- :   [1m[35m (1.6ms)[0m  commit transaction
+D, [2013-12-02T23:04:52.163320 #56034] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:04:52.165278 #56034] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:04:52.165818 #56034] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T23:04:52.165890 #56034]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:04:52.166335 #56034] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2013-12-02T23:04:52.166854 #56034] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mDROP TABLE "users"[0m
+D, [2013-12-02T23:04:52.168492 #56034] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-12-02T23:04:52.170114 #56034] DEBUG -- :   [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+D, [2013-12-02T23:04:58.112741 #56055] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2013-12-02T23:04:58.113122 #56055] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+D, [2013-12-02T23:04:58.113663 #56055] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2013-12-02T23:04:58.113705 #56055]  INFO -- : Migrating to CreateUser (1)
+D, [2013-12-02T23:04:58.114132 #56055] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2013-12-02T23:04:58.116987 #56055] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255) NOT NULL, "lastname" varchar(255) NOT NULL, "username" varchar(255) NOT NULL, "password" varchar(255) NOT NULL) [0m
+D, [2013-12-02T23:04:58.128041 #56055] DEBUG -- :   [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "1"]]
+D, [2013-12-02T23:04:58.130096 #56055] DEBUG -- :   [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
