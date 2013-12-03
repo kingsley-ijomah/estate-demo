@@ -5,10 +5,8 @@ require 'rubygems'
 require 'active_record'
 require 'yaml'
 
-url = lib + '/database.yml'
-dbconfig = YAML::load(File.open(url))
+dbconfig = YAML::load(File.open(lib + ENV["DATABASE"]))
 ActiveRecord::Base.establish_connection(dbconfig)
-ActiveRecord::Base.logger = Logger.new(STDERR)
 
 class User < ActiveRecord::Base
 	def create(user)
@@ -19,3 +17,5 @@ class User < ActiveRecord::Base
 		User.where(firstname: value).take
 	end
 end
+
+puts ENV["DATABASE"]

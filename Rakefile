@@ -1,4 +1,5 @@
 require "bundler/gem_tasks"
+require 'cucumber/rake/task'
 require 'active_record'
 require 'yaml'
 
@@ -14,13 +15,8 @@ namespace :db do
 
 	desc "Establish connection using details in YAML"
 	task :environment do
-		ActiveRecord::Base.establish_connection(YAML::load(File.open('lib/estate-demo/config/database.yml')))
-		ActiveRecord::Base.logger = Logger.new(File.open('database.log', 'a'))
-	end
-
-	desc "Establish connection to test database"
-	task :environment do
-		ActiveRecord::Base.establish_connection(YAML::load(File.open('lib/estate-demo/config/test.yml')))
+		ENV["DATABASE"] = '/test.yml'
+		ActiveRecord::Base.establish_connection(YAML::load(File.open('lib/estate-demo/config' + ENV["DATABASE"])))
 	end
 
 	desc "Drop database tables"
@@ -35,4 +31,8 @@ namespace :db do
 
 	desc "Drop and rebuild all database tables"
 	task :rebuild => [:environment, :down, :up]
+
+	Cucumber::Rake::Task.new do | t |
+	  t.cucumber_opts = "."
+	end
 end
