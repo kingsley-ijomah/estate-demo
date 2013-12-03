@@ -31,8 +31,9 @@ namespace :db do
 
 	desc "Drop and rebuild all database tables"
 	task :rebuild => [:environment, :down, :up]
+end
 
-	Cucumber::Rake::Task.new do | t |
-	  t.cucumber_opts = "."
-	end
+Cucumber::Rake::Task.new(:run) do |task|
+  task.cucumber_opts = ["features"]
+  puts 'kin'
 end
