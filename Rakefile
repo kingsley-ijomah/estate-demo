@@ -15,7 +15,6 @@ namespace :db do
 
 	desc "Establish connection using details in YAML"
 	task :environment do
-		ENV["DATABASE"] = '/test.yml'
 		ActiveRecord::Base.establish_connection(YAML::load(File.open('lib/estate-demo/config' + ENV["DATABASE"])))
 	end
 
@@ -33,7 +32,7 @@ namespace :db do
 	task :rebuild => [:environment, :down, :up]
 end
 
-Cucumber::Rake::Task.new(:run) do |task|
-  task.cucumber_opts = ["features"]
-  puts 'kin'
+Cucumber::Rake::Task.new(:test) do |task|
+  task.cucumber_opts = ["."]
+  ENV["DATABASE"] = '/test.yml'
 end
