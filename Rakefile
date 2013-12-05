@@ -33,6 +33,7 @@ namespace :db do
 end
 
 Cucumber::Rake::Task.new(:test) do |task|
+  Rake::Task['db:rebuild'].invoke
   task.cucumber_opts = ["."]
   ENV["DATABASE"] = '/test.yml'
 end
